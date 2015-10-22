@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <script src="jspm_packages/system.js"></script>
+    <script>
+        System.import('https://maps.googleapis.com/maps/api/js!googlemaps.js').then(function (GoogleMaps) {
+            new GoogleMaps.Map(document.getElementById('map'), {
+                center: {lat: -28.0, lng: 22.0},
+                zoom: 6
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="map"></div>
+</body>
+</html>

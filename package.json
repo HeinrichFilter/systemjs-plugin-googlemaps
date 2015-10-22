@@ -1,0 +1,29 @@
+{
+  "name": "systemjs-plugin-googlemaps",
+  "version": "0.1.0",
+  "description": "SystemJS plugin to load Google Maps",
+  "main": "googlemaps.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HeinrichFilter/systemjs-plugin-googlemaps.git"
+  },
+  "keywords": [
+    "systemjs",
+    "loader",
+    "plugin",
+    "google maps"
+  ],
+  "author": "HeinrichFilter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HeinrichFilter/systemjs-plugin-googlemaps/issues"
+  },
+  "homepage": "https://github.com/HeinrichFilter/systemjs-plugin-googlemaps",
+  "jspm": {
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
