@@ -30,6 +30,7 @@ System.import('googlemaps').then(function (GoogleMaps) {
 # References
 
 This code was adapted from various places:
-https://github.com/millermedeiros/requirejs-plugins/blob/master/src/async.js
-https://github.com/systemjs/systemjs/issues/424
-https://github.com/systemjs/systemjs/issues/314
+
+- https://github.com/millermedeiros/requirejs-plugins/blob/master/src/async.js
+- https://github.com/systemjs/systemjs/issues/424
+- https://github.com/systemjs/systemjs/issues/314
