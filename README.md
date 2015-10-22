@@ -11,7 +11,7 @@ In config.js:
 ``` javascript
 System.config({
   map: {
-    "googlmaps": "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places!HeinrichFilter/systemjs-plugin-googlemaps"
+    "googlmaps": "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places!HeinrichFilter/systemjs-plugin-googlemaps/googlemaps"
   }
 });
 ```
