@@ -3,15 +3,20 @@
 SystemJS plugin to load Google Maps
 
 ```
-jspm install github:HeinrichFilter/systemjs-plugin-googlemaps
+jspm install systemjs-googlemaps=github:HeinrichFilter/systemjs-plugin-googlemaps
 ```
 
 In config.js:
 
 ``` javascript
 System.config({
+  meta: {
+    "google-maps": {
+      "loader": "systemjs-googlemaps"
+    }
+  },
   map: {
-    "googlemaps": "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places!HeinrichFilter/systemjs-plugin-googlemaps/googlemaps"
+    "google-maps": "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"
   }
 });
 ```
@@ -19,7 +24,7 @@ System.config({
 In your app:
 
 ``` javascript
-System.import('googlemaps').then(function (GoogleMaps) {
+System.import('google-maps').then(function (GoogleMaps) {
     new GoogleMaps.Map(document.getElementById('map'), {
         center: {lat: -28.0, lng: 22.0},
         zoom: 6
