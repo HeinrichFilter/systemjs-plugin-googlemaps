@@ -2,7 +2,7 @@
   "name": "systemjs-plugin-googlemaps",
   "version": "0.1.0",
   "description": "SystemJS plugin to load Google Maps",
-  "main": "googlemaps.js",
+  "main": "googlemaps",
   "repository": {
     "type": "git",
     "url": "https://github.com/HeinrichFilter/systemjs-plugin-googlemaps.git"
