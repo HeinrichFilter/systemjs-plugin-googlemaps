@@ -13,9 +13,7 @@ exports.fetch = function(load) {
   var scriptUrl = load.address
   scriptUrl += (scriptUrl.indexOf('?') < 0)? '?' : '&';
   scriptUrl += "callback=__google_maps_callback__"
-  return injectScript(scriptUrl);
+  return injectScript(scriptUrl).then(function() {
+    return 'module.exports = google.maps';
+  });
 };
-
-exports.translate = function(load) {
-  return 'module.exports = google.maps';
-}

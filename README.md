@@ -10,13 +10,15 @@ In config.js:
 
 ``` javascript
 System.config({
-  meta: {
+  "paths": {
+    // putting this in "map" breaks SystemJS builder
+    "google-maps": "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"
+  },
+  "meta": {
     "google-maps": {
+      "build": false, // exclude external Google Maps JS from SystemJS builder
       "loader": "systemjs-googlemaps"
     }
-  },
-  map: {
-    "google-maps": "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"
   }
 });
 ```
