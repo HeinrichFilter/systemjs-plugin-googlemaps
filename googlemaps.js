@@ -4,6 +4,9 @@ function injectScript(src){
       resolve('');
     }
 
+    // Fix to issue #3
+    src = src.replace(".js", "");
+
     var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = src;
     var t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s,t);
   });
