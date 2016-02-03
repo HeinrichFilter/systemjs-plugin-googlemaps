@@ -12,8 +12,7 @@ In config.js:
 System.config({
   "paths": {
     // putting this in "map" breaks SystemJS builder
-    // Note: the trailing ampersand is needed so that the appended ".js" is ignored
-    "google-maps": "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&"
+    "google-maps": "https://maps.googleapis.com/maps/api/js"
   },
   "meta": {
     "google-maps": {
