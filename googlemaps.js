@@ -4,9 +4,6 @@ function injectScript(src){
       resolve('');
     }
 
-    // Fix to issue #3
-    src = src.replace(".js", "");
-
     var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = src;
     var t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s,t);
   });
@@ -14,6 +11,7 @@ function injectScript(src){
 
 exports.fetch = function(load) {
   var scriptUrl = load.address
+  scriptUrl = scriptUrl.replace(/\.js$/, '');//Remove .js if it is added to the end of the URL
   scriptUrl += (scriptUrl.indexOf('?') < 0)? '?' : '&';
   scriptUrl += "callback=__google_maps_callback__"
   return injectScript(scriptUrl).then(function() {
