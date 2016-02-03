@@ -11,6 +11,7 @@ function injectScript(src){
 
 exports.fetch = function(load) {
   var scriptUrl = load.address
+  scriptUrl = scriptUrl.replace(/\.js$/, '');//Remove .js if it is added to the end of the URL
   scriptUrl += (scriptUrl.indexOf('?') < 0)? '?' : '&';
   scriptUrl += "callback=__google_maps_callback__"
   return injectScript(scriptUrl).then(function() {
