@@ -5,7 +5,9 @@ function injectScript(src){
     }
 
     var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = src;
-    var t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s,t);
+    var t = document.getElementsByTagName('script')[0];
+    if (t) { t.parentNode.insertBefore(s, t); }
+      else { var h = document.getElementsByTagName("head")[0]; h.appendChild(s); }
   });
 }
 
