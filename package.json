@@ -1,6 +1,6 @@
 {
   "name": "systemjs-plugin-googlemaps",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "SystemJS plugin to load Google Maps",
   "main": "googlemaps",
   "repository": {
